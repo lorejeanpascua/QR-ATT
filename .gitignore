@@ -20,9 +20,14 @@ expo-env.d.ts
 .DS_Store
 
 # local env files
+<<<<<<< HEAD
 .env
 .env*.local
 
 
+=======
+.env*.local
+
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
 # teaching materials
 docs/

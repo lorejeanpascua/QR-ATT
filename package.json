@@ -14,16 +14,25 @@
     "@react-navigation/bottom-tabs": "^7.4.0",
     "@react-navigation/elements": "^2.6.3",
     "@react-navigation/native": "^7.1.8",
+<<<<<<< HEAD
     "@supabase/supabase-js": "^2.116.0",
     "expo": "~54.0.35",
     "expo-camera": "~17.0.10",
     "expo-constants": "~18.0.13",
     "expo-dev-client": "~6.0.21",
+=======
+    "expo": "~54.0.35",
+    "expo-camera": "~17.0.10",
+    "expo-constants": "~18.0.13",
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
     "expo-font": "~14.0.12",
     "expo-image": "~3.0.11",
     "expo-linking": "~8.0.12",
     "expo-router": "~6.0.24",
+<<<<<<< HEAD
     "expo-secure-store": "~15.0.8",
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
     "expo-splash-screen": "~31.0.13",
     "expo-sqlite": "~16.0.10",
     "expo-status-bar": "~3.0.9",

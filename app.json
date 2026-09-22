@@ -19,8 +19,12 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
+<<<<<<< HEAD
       "predictiveBackGestureEnabled": false,
       "package": "com.lorejeanpascua.QRATT"
+=======
+      "predictiveBackGestureEnabled": false
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
     },
     "web": {
       "output": "static",
@@ -38,6 +42,7 @@
         }
       ],
       "expo-sqlite",
+<<<<<<< HEAD
       "@react-native-community/datetimepicker",
       "expo-secure-store"
     ],
@@ -49,6 +54,12 @@
       "eas": {
         "projectId": "5c2f048a-eaae-4327-898d-ad9b5c8b3f66"
       }
+=======
+      "@react-native-community/datetimepicker"
+    ],
+    "experiments": {
+      "reactCompiler": true
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
     }
   }
 }

@@ -10,7 +10,11 @@ export default function Index() {
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
         <Header title="QR Attendance" />
+<<<<<<< HEAD
         <Text style={styles.author}>by: Lore Jean L. Pascua</Text>
+=======
+        <Text>by: Lore Jean L. Pascua</Text>
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
       </View>
 
       <View style={styles.bodyContainer}>
@@ -43,6 +47,7 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
@@ -76,3 +81,12 @@ author: {
     width: '100%',
   },
 });
+=======
+  container: { flex: 1, backgroundColor: COLORS.background, alignItems: 'center' },
+  headerContainer: { flex: 1, justifyContent: 'center' },
+  bodyContainer: { alignItems: 'center', paddingHorizontal: 32, marginBottom: 16 },
+  mainTitle: { fontSize: 18, fontWeight: '600', color: COLORS.primary, marginBottom: 6, textAlign: 'center' },
+  subtitle: { fontSize: 14, color: COLORS.textSecondary, textAlign: 'center' },
+  footerContainer: { flex: 1 / 3, alignItems: 'center', paddingHorizontal: 24, width: '100%' },
+});
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce

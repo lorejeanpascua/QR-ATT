@@ -1,12 +1,16 @@
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+<<<<<<< HEAD
 import { COLORS } from '@/constants/colors';
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+<<<<<<< HEAD
         tabBarActiveTintColor: COLORS.primary,
         headerStyle: { backgroundColor: COLORS.background },
         headerShadowVisible: false,
@@ -16,6 +20,13 @@ export default function TabLayout() {
           borderTopColor: COLORS.border,
           borderTopWidth: 1,
         },
+=======
+        tabBarActiveTintColor: '#ffd33d',
+        headerStyle: { backgroundColor: '#25292e' },
+        headerShadowVisible: false,
+        headerTintColor: '#fff',
+        tabBarStyle: { backgroundColor: '#25292e' },
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
       }}
     >
       <Tabs.Screen
@@ -31,7 +42,10 @@ export default function TabLayout() {
           ),
         }}
       />
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
       <Tabs.Screen
         name="scan"
         options={{
@@ -45,7 +59,10 @@ export default function TabLayout() {
           ),
         }}
       />
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
       <Tabs.Screen
         name="history"
         options={{
@@ -59,7 +76,10 @@ export default function TabLayout() {
           ),
         }}
       />
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
       <Tabs.Screen
         name="profile"
         options={{
@@ -73,6 +93,7 @@ export default function TabLayout() {
           ),
         }}
       />
+<<<<<<< HEAD
 
       <Tabs.Screen
         name="teacher"
@@ -90,3 +111,21 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+=======
+      <Tabs.Screen
+      name="teacher"
+      options={{
+        title: 'Teacher',
+        tabBarIcon: ({ color, focused }) => (
+          <Ionicons
+            name={focused ? 'clipboard' : 'clipboard-outline'}
+            color={color}
+            size={24}
+          />
+        ),
+      }}
+      />
+    </Tabs>
+  );
+}
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce

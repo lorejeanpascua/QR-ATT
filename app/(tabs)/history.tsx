@@ -3,6 +3,7 @@ import { useCallback, useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 import { COLORS } from '@/constants/colors';
+<<<<<<< HEAD
 import { useAuth } from '@/lib/auth';
 import {
   getAttendanceHistory,
@@ -135,30 +136,65 @@ export default function HistoryScreen() {
     );
   }
 
+=======
+import { STUDENT_ID } from '@/constants/student';
+import { getAttendanceHistory, type AttendanceRecord } from '@/lib/database';
+
+export default function HistoryScreen() {
+  const [records, setRecords] = useState<AttendanceRecord[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const loadHistory = useCallback(() => {
+    getAttendanceHistory(STUDENT_ID).then((rows) => {
+      setRecords(rows);
+      setLoading(false);
+    });
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadHistory();
+    }, [loadHistory])
+  );
+
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Attendance History</Text>
 
       {loading ? (
         <Text style={styles.subtitle}>Loading records...</Text>
+<<<<<<< HEAD
       ) : studentRecords.length === 0 ? (
+=======
+      ) : records.length === 0 ? (
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
         <Text style={styles.subtitle}>
           No records yet. Scan a QR code to register your attendance.
         </Text>
       ) : (
         <FlatList
+<<<<<<< HEAD
           data={studentRecords}
+=======
+          data={records}
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
           keyExtractor={(item) => String(item.id)}
           contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <View style={styles.card}>
               <Text style={styles.eventTitle}>{item.eventTitle}</Text>
+<<<<<<< HEAD
 
               <Text style={styles.eventMeta}>{item.eventId}</Text>
 
               <Text style={styles.eventMeta}>
                 {formatDate(item.scannedAt)}
               </Text>
+=======
+              <Text style={styles.eventMeta}>{item.eventId}</Text>
+              <Text style={styles.eventMeta}>{formatDate(item.scannedAt)}</Text>
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
             </View>
           )}
         />
@@ -178,14 +214,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingTop: 24,
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
   title: {
     fontSize: 20,
     fontWeight: '600',
     color: COLORS.textPrimary,
     marginBottom: 16,
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
   subtitle: {
     fontSize: 14,
     color: COLORS.textSecondary,
@@ -193,11 +235,17 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginTop: 32,
   },
+<<<<<<< HEAD
 
   list: {
     paddingBottom: 24,
   },
 
+=======
+  list: {
+    paddingBottom: 24,
+  },
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
   card: {
     backgroundColor: COLORS.card,
     borderRadius: 14,
@@ -209,6 +257,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
+<<<<<<< HEAD
 
   headerRow: {
     flexDirection: 'row',
@@ -218,11 +267,15 @@ const styles = StyleSheet.create({
 
   eventTitle: {
     flex: 1,
+=======
+  eventTitle: {
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
     fontSize: 16,
     fontWeight: '600',
     color: COLORS.textPrimary,
     marginBottom: 4,
   },
+<<<<<<< HEAD
 
   eventMeta: {
     fontSize: 13,
@@ -278,3 +331,11 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
 });
+=======
+  eventMeta: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    marginTop: 2,
+  },
+});
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce

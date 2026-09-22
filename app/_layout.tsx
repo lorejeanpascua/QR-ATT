@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Redirect, Stack, useSegments } from 'expo-router';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
@@ -39,3 +40,14 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
 });
+=======
+import { Stack } from 'expo-router';
+
+export default function RootLayout() {
+  return (
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
+  );
+}
+>>>>>>> b2d3527567e32017a9d8d123131779c18c5bcdce
